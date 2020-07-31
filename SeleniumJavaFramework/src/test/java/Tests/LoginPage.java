@@ -24,10 +24,7 @@ public class LoginPage extends TestcaseBaseClass  {
 	static  WebDriver driver;
 	static NaukriLoginPage obj1= new  NaukriLoginPage(driver);
 			
-	/* @Test(priority=1)
-	  
-	  
-*/
+	
 	
   @Test(priority=0)
   public static void LoginValidation() throws IOException {
