@@ -1,0 +1,5 @@
+Browser=Chrome
+ChromeDriver=C:\\Users\\Dycmmryps\\eclipse-workspace\\SeleniumFramework\\SeleniumJavaFramework\\chromedriver\\chromedriver.exe
+URL=https://www.naukri.com/
+ExcelPath=C:\\Users\\Dycmmryps\\eclipse-workspace\\SeleniumFramework\\SeleniumJavaFramework\\TestData\\TestDataInput.xlsx
+screenshot=C:\\Users\\Dycmmryps\\eclipse-workspace\\SeleniumFramework\\SeleniumJavaFramework\\Screenshots\\Login.png
