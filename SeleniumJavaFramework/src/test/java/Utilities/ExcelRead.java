@@ -2,7 +2,9 @@ package Utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 
+import org.apache.poi.util.SystemOutLogger;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -10,36 +12,45 @@ import Utilities.ConfigReader;
 
 public class ExcelRead 
 {
-	XSSFWorkbook wbook=null;
-	XSSFSheet ws=null;
+	public  XSSFWorkbook wbook=null;
+	public  XSSFSheet ws=null;
+	
+	
 	public ExcelRead()
 	{
-		ConfigReader reader= new ConfigReader();
+		ConfigReader reader=new ConfigReader();
 	try
 	{
-	File src=new File(reader.getExcelpath());
+	//File src=new File("C:\\Users\\Dycmmryps\\Documents\\GitHub\\Framework\\SeleniumJavaFramework\\TestData\\TestDataInput.xlsx");
+	
+		File src=new File(reader.getExcelpath());
+		
+		System.out.print(reader.getExcelpath());
+	System.out.print(src);
+	
+	try {
 	FileInputStream fis=new FileInputStream(src);
+	
 	wbook= new XSSFWorkbook(fis);
 	
+	}
+	catch(IOException ex )
+	{
+		ex.getMessage();
+	}
 	}
 	catch(Exception e)
 	{
 		e.getMessage();
 		System.out.print("Unable to read excel data");
 	}
-}
+	}
 
+	
 	public String getStringDataCellvalue(String sheetName,int row,int col)
 	{
 		
 		 ws=wbook.getSheet(sheetName);
-		String data= ws.getRow(row).getCell(col).getStringCellValue();
-		return data;
-	}
-	public String getStringDataCellvalue(int sheetindex,int row,int col)
-	{
-		
-		 ws=wbook.getSheetAt(sheetindex);
 		String data= ws.getRow(row).getCell(col).getStringCellValue();
 		return data;
 	}

@@ -16,7 +16,9 @@ public class ConfigReader {
 	
 	public ConfigReader()
 	{
-	File src =new File("C:\\Users\\Dycmmryps\\eclipse-workspace\\SeleniumFramework\\SeleniumJavaFramework\\Config\\config.property");
+	
+	
+	File src =new File(System.getProperty("user.dir")+"/Config/config.property");
 	
 		System.out.print(src);
 		try {
@@ -30,20 +32,20 @@ public class ConfigReader {
 		}
 		
 }
-	public  static String getBrowser()
+	public    String getBrowser()
 	{
 		String Name=prop.getProperty("Browser");
 		System.out.println("BrowserName:"+Name);
 		return Name;
 	}
 	
-	public  static String getchrome()
+	public  String getchrome()
 	{
 		String Path=prop.getProperty("ChromeDriver");
 		System.out.println("ChromeDriverpath:"+Path);
 		return Path;
 	}
-	public String getURL()
+	public   String getURL()
 	{
 		String URLPath=prop.getProperty("URL");
 		System.out.println("ChromeDriverpath:"+URLPath);

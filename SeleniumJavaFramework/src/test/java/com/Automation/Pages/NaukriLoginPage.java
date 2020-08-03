@@ -13,7 +13,7 @@ public class NaukriLoginPage {
 		public NaukriLoginPage (WebDriver driver)
 		{
 			this.driver=driver;
-			PageFactory.initElements(driver,this );
+			//PageFactory.initElements(driver,this );
 			//PageFactory.initElements(driver,this );
 			
 			/*String objclass= this.getClass().getSimpleName();
